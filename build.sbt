@@ -5,7 +5,8 @@ lazy val root = (project in file("."))
    name := "pps-lab-testing",
    scalaVersion := "2.12.11",
     // javacOptions ++= Seq("-source", "1.8", "-target", "1.8"),
-    mainClass in (Compile, run) := Some("main.scala.u02.BTrees"),
+    //mainClass in (Compile, run) := Some("main.scala.u02.BTrees"),
+
     libraryDependencies ++= Seq(
       // "junit" % "junit" % "4.12" % Test, // Junit 4
       "com.novocode" % "junit-interface" % "0.11" % Test, // sbt's test interface for JUnit 4
@@ -27,7 +28,6 @@ lazy val root = (project in file("."))
     crossPaths := false, // https://github.com/sbt/junit-interface/issues/35
     Test / parallelExecution := false
   )
-
 
 // Cucumber configuration
 // Run by:  sbt> cucumber
